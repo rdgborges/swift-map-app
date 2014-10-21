@@ -1,21 +1,25 @@
 //
 //  AppDelegate.swift
-//  SwiftMapApp
+//  WhereToDo
 //
-//  Created by Rodrigo Borges Soares on 20/10/14.
+//  Created by Rodrigo Borges Soares on 07/10/14.
 //  Copyright (c) 2014 Rodrigo Borges. All rights reserved.
 //
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let databaseHandler: DatabaseHandler = DatabaseHandler()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        databaseHandler.initializeDb()
+        
         return true
     }
 
